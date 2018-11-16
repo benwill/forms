@@ -1,0 +1,37 @@
+.app {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.app--header {
+  flex: 1;
+}
+
+.app-content {
+  flex: 1;
+}
+
+/* State tree */
+.state {
+  flex: 0 0 50%;
+  background: #dbdbdb;
+}
+
+.state pre {
+  padding: 10px;
+}
+
+/* Form css */
+.form-wrapper {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.form-wrapper--form {
+  flex: 0 0 50%;
+}
+.form-wrapper form {
+  padding: 10px;
+}
