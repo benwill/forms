@@ -4,6 +4,7 @@ import "./app.css";
 
 // Pages
 import BasicForm from "./BasicForm";
+import BasicValidation from "./BasicValidation";
 
 function App() {
   return (
@@ -14,12 +15,13 @@ function App() {
             <Link to="/basic">Basic Form</Link>
           </li>
           <li>
-            <Link to="/advanced">Advanced Form (TODO)</Link>
+            <Link to="/basic-validation">Advanced Form</Link>
           </li>
         </ul>
         <div className="app-content">
           <Switch>
             <Route exact path="/basic" component={BasicForm} />
+            <Route exact path="/basic-validation" component={BasicValidation} />
           </Switch>
         </div>
       </div>
