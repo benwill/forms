@@ -35,3 +35,7 @@
 .form-wrapper form {
   padding: 10px;
 }
+
+.form-wrapper form p label {
+  display: block;
+}

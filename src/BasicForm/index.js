@@ -6,21 +6,12 @@ import reducer, {
   CHANGE_FIRSTNAME,
   CHANGE_SURNAME
 } from "./reducer";
-import useOnChangeTextInput from "../hooks/useOnChangeTextInput";
+import useTextInput from "./hooks/useTextInput";
 
 function Form() {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const firstName = useOnChangeTextInput(
-    state.firstname,
-    dispatch,
-    CHANGE_FIRSTNAME
-  );
-  const lastName = useOnChangeTextInput(
-    state.surname,
-    dispatch,
-    CHANGE_SURNAME
-  );
+  const firstName = useTextInput(state.firstname, dispatch, CHANGE_FIRSTNAME);
+  const lastName = useTextInput(state.surname, dispatch, CHANGE_SURNAME);
 
   return (
     <div className="form-wrapper">

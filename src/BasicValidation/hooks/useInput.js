@@ -1,4 +1,4 @@
-export default function useFormInputWithValidation(field, dispatch, type) {
+export default function useFormInputWithValidation(label, field, dispatch, type) {
   function onBlur(e) {
     dispatch({
       type,
@@ -7,6 +7,7 @@ export default function useFormInputWithValidation(field, dispatch, type) {
   }
 
   return {
+    label,
     type: "text",
     defaultValue: field.value,
     error: field.error,

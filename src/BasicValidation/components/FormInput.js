@@ -1,9 +1,9 @@
-import React, { useReducer } from "react";
+import React from "react";
 
-const FormInput = ({ onChange, onBlur, defaultValue, value, error }) => {
-  console.log(error);
+const FormInput = ({ label, onChange, onBlur, defaultValue, value, error }) => {
   return (
     <p>
+      <label>{label}</label>
       <input
         onChange={onChange}
         value={value}

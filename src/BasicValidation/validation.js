@@ -1,4 +1,7 @@
 export const lengthValidation = (value, min, max) => {
-  const trimmedValue = value.trim();
-  return trimmedValue.length <= max && trimmedValue.length >= min;
+  const trimmedValue = value && value.trim();
+  if(trimmedValue.length <= max && trimmedValue.length >= min) {
+    return true;
+  }
+  return false;
 };

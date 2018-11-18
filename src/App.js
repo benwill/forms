@@ -15,13 +15,13 @@ function App() {
             <Link to="/basic">Basic Form</Link>
           </li>
           <li>
-            <Link to="/basic-validation">Advanced Form</Link>
+            <Link to="/inline-validation">Inline validation Form</Link>
           </li>
         </ul>
         <div className="app-content">
           <Switch>
             <Route exact path="/basic" component={BasicForm} />
-            <Route exact path="/basic-validation" component={BasicValidation} />
+            <Route exact path="/inline-validation" component={BasicValidation} />
           </Switch>
         </div>
       </div>
