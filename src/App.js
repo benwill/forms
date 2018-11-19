@@ -1,27 +1,29 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import "./app.css";
-
-// Pages
-import BasicForm from "./BasicForm";
-import BasicValidation from "./BasicValidation";
+import examples from "./examples";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
         <ul className="app-header">
-          <li>
-            <Link to="/basic">Basic Form</Link>
-          </li>
-          <li>
-            <Link to="/inline-validation">Inline validation Form</Link>
-          </li>
+          {examples.map(page => (
+            <li key={page.url}>
+              <Link to={`/${page.url}`}>{page.name}</Link>
+            </li>
+          ))}
         </ul>
         <div className="app-content">
           <Switch>
-            <Route exact path="/basic" component={BasicForm} />
-            <Route exact path="/inline-validation" component={BasicValidation} />
+            {examples.map(page => (
+              <Route
+                key={page.url}
+                exact
+                path={`/${page.url}`}
+                component={page.component}
+              />
+            ))}
           </Switch>
         </div>
       </div>
